@@ -79,6 +79,25 @@ li {
   gap: 40px;
 }
 
+.active {
+  position: relative;
+}
+
+.active::after{
+  content: "";
+  position: absolute;
+  background-color: #4d5ae5;
+  bottom: -27px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.active:hover::after{
+  width: 100%;
+}
+
+
 .menu-div .menu-nav {
   display: flex;
 }
@@ -142,7 +161,7 @@ li {
   flex-direction: column;
   padding-top: 120px;
   padding-bottom: 120px;
-  background-color: #2e2f42;
+  background-image: url("./images/people-office.jpg");
 }
 
 .main-button-div {
