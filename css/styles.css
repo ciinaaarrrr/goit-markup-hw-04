@@ -50,8 +50,7 @@ p {
 
 button {
   font-family: "roboto", sans-serif;
-  letter-spacing: 4%;
-  font-weight: regular;
+  letter-spacing: 2px;
   line-height: 16px;
 }
 
@@ -83,7 +82,7 @@ li {
   position: relative;
 }
 
-.active::after{
+.active::after {
   content: "";
   position: absolute;
   background-color: #4d5ae5;
@@ -93,10 +92,11 @@ li {
   height: 4px;
   border-radius: 2px;
 }
-.active:hover::after{
+.active:hover::after {
   width: 100%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .menu-div .menu-nav {
   display: flex;
@@ -122,6 +122,9 @@ li {
   display: flex;
   gap: 40px;
   padding-right: 156px;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-container {
@@ -133,7 +136,6 @@ li {
   color: #404bbf;
 }
 /* NAV HEADER SON*/
-
 
 /* MAİN HEADER BAŞLANGIÇ */
 .main-button {
@@ -150,6 +152,8 @@ li {
 .main-button:after,
 .main-button:focus {
   background-color: #404bbf;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .main-button-span {
@@ -161,7 +165,8 @@ li {
   flex-direction: column;
   padding-top: 120px;
   padding-bottom: 120px;
-  background-image: url("./images/people-office.jpg");
+  background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url("../images/people-office.jpg");
 }
 
 .main-button-div {
@@ -175,20 +180,40 @@ li {
 }
 /* MAİN HEADER SON */
 
-
 /*ABOUT BAŞLANGIÇ */
+.group {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 264px;
+  height: 112px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+}
+
+.group svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px;
+  height: 64px;
+}
+
 .about-container {
   display: flex;
   background-color: #fff;
   justify-content: center;
   flex-direction: column;
-  padding-left: 156px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-left: 26px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .section-about ul {
   display: flex;
+  justify-content: center;
   gap: 20px;
 }
 
@@ -200,35 +225,103 @@ li {
   display: flex;
   text-align: center;
   background-color: #f4f4fd;
-  padding-left: 37px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 200px;
 }
 
 .our-team ul {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 30px;
 }
 
 .our-team-container {
+  width: 1440px;
+  height: 780px;
+  display: flex;
+  flex-direction: column;
+}
+
+.our-team-container ul {
   display: flex;
   justify-content: center;
-  flex-direction: column;
 }
 
 .our-team-container .ot-item {
   width: 264px;
-  height: 380px;
+  height: 428px;
   background-color: #fff;
+}
+
+.our-team-container h2 {
+  text-align: center;
+  padding-bottom: 30px;
+  color: #2e2f42;
+}
+
+.ot-item {
+  border-radius: 6px;
+  box-shadow: 3px 3px 10px grey;
+}
+
+.svg-icon {
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.svg-icon svg {
+  width: 55%;
+  height: 55%;
+  fill: white;
+}
+
+.svg-icon:hover {
+  background-color: #31d0aa;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-ot {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
 }
 
 /*OUR TEAM BİTİŞ*/
 
 /*OUT PORTFOLİO BAŞLANGIÇ*/
+.animation {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  color: white;
+  background-color: blue;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+  padding: 50px;
+}
+
+.animation:hover .overlay {
+  transform: translateY(0);
+}
 .portfolio-container {
   display: flex;
   flex-direction: column;
 }
+
 .our-portfolio {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -253,6 +346,8 @@ li {
 
 .portfolio-container h2 {
   text-align: center;
+  color: #2e2f42;
+  padding-bottom: 30px;
 }
 .our-item1 {
   padding-bottom: 15px;
@@ -265,6 +360,20 @@ li {
 .our-item1 li p,
 .our-item2 li p {
   margin-left: 7px;
+}
+
+.our-item1 li:hover,
+.our-item2 li:hover {
+  box-shadow: 3px 3px 10px grey;
+  cursor: pointer;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.our-item1 li,
+.our-item2 li {
+  width: 360px;
+  height: 420px;
 }
 /* OUT PORTFOLİO BİTİŞ */
 
@@ -280,6 +389,13 @@ li {
 .footer p {
   padding-left: 156px;
 }
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+  gap: 80px;
+}
+
 /* FOOTER BİTİŞ */
 
 /* FUTURSUZCA :D*/
@@ -291,13 +407,7 @@ li {
 .container {
   display: flex;
   flex-direction: column;
-  width: 1158px;
+  width: 1440px;
   margin: 0 auto;
 }
 /* FUTURSUZCA :D*/
-
-#icon-astronaut {
-  fill: black;
-  width: 100px;
-  height: 100px;
-}

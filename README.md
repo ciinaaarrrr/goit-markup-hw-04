@@ -28,3 +28,10 @@ figmaya uyarak çalıştım gözümden kaçan biryer olmamıştır umarım teşe
 
 JuniorKabakistan
 Çınar Kabak
+
+# goit-markup-hw-04
+
+Our portfolio bölümünde ufak hatalar çıkabilir orayı emin olmadan tamamlamış bulunmaktayım pretierden kontrol edildi teşekkürler
+
+JuniorKabakistan
+Çınar Kabak
