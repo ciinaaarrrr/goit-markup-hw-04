@@ -10,10 +10,10 @@ body {
 
 h1 {
   font-family: "roboto", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 1.12px;
+  line-height: 60px;
+  letter-spacing: 0.02em;
 }
 
 h2 {
@@ -27,7 +27,8 @@ h3 {
   font-family: "roboto", sans-serif;
   font-weight: 500;
   font-size: 20px;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.02em;
+  line-height: 24px;
 }
 
 Ol,
@@ -45,7 +46,10 @@ a {
 
 p {
   font-family: "roboto", sans-serif;
-  font-size: 12px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.02em;
 }
 
 button {
@@ -138,6 +142,7 @@ li {
 /* NAV HEADER SON*/
 
 /* MAİN HEADER BAŞLANGIÇ */
+
 .main-button {
   color: #fff;
   background-color: #4d5ae5;
@@ -157,7 +162,11 @@ li {
 }
 
 .main-button-span {
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
 }
 
 .main-header {
@@ -302,7 +311,7 @@ li {
 }
 .overlay {
   color: white;
-  background-color: blue;
+  background-color: rgba(77, 90, 229, 1);
   position: absolute;
   top: 0px;
   left: 0;
